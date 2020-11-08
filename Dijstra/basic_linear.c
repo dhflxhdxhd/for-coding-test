@@ -1,3 +1,8 @@
+// 다익스트라 알고리즘 구현 - 순차 탐색
+// "방문하지 않은 노드 중에서 최단 거리가 가장 짧은 노드를 선택"
+// Implement Dijkstra Algorithm - Linear Search
+// "Select the node with the shortest distance among unvisited nodes.
+
 #include <stdio.h>
 #include <stdbool.h>
 #define size 8
