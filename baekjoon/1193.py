@@ -1,6 +1,7 @@
 num = int(input())
 line = 1
 
+#line 번호와 해당 line의 num이 몇 번째에 있는지.
 while num > line:
     num -= line
     line += 1
