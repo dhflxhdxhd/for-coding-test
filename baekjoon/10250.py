@@ -21,5 +21,9 @@ for t in range(T):
         #방법 1
         num = y*100 + x 
  
-
+    #방법 2
+    # if x<10:
+    #     num = str(y)+ '0'+str(x) 
+    # else:
+    #     num = str(y) + str(x)   
     print(num)
