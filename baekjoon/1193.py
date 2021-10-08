@@ -8,10 +8,10 @@ while num > line:
     line += 1
 
 if line%2 == 0:
-    a = num
-    b = line+1-num
+    ja = num
+    mo = line+1-num
 else:
-    a = line+1-num
-    b = num
+    ja = line+1-num
+    mo = num
 
-print(f'{a}/{b}')
+print(f'{ja}/{mo}')
