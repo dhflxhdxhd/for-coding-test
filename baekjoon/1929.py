@@ -2,7 +2,6 @@
 import math
 a,b = map(int,input().split())
 
-
 def isPrime(num):
     if(num == 1): return False
     else:
@@ -11,9 +10,6 @@ def isPrime(num):
                 return False
         return True
 
-    
 for i in range(a,b+1):
     if isPrime(i):
         print(i)
-
-
