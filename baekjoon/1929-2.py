@@ -1,3 +1,6 @@
+#에라토스테네스의 체
+#범위에서 합성수를 지우는 방식으로 소수를 찾는 방법. 
+    
 import math
 m,n = map(int,input().split())
 
