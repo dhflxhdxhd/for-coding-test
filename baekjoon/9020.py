@@ -3,8 +3,8 @@
 
 #나의 생각 
 
-t = int(input())
-
+# t = int(input())
+import math
 def isPrime(st):
     for j in range(2,int(math.sqrt(st))+1):
         if st%j == 0:
@@ -12,14 +12,16 @@ def isPrime(st):
     return True
 
 st = 2
-for i in range(t):
-    n = int(input())
+n = int(input())
+while True:
     if isPrime(st):
         n -= st
+        print(n)
+        print(st)
         if isPrime(n):
-            print(st)
-            print(n)
+            break
         else:
             st += 1
 
+print("n"+str(n)+" st"+str(st))
 
