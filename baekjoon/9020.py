@@ -1,27 +1,25 @@
 #골드바흐의 추측
 #유명한 정수론의 미해결 문제로, 2보다 큰 모든 짝수는 두 소수의 합으로 나타낼 수 있다.
+n=10001
+prime = [False,False] + [True]*(n-1)
 
-#나의 생각 
+for i in range(2,int(pow(n,0.5)+1)):
+  if prime[i]:
+    for j in range(i+i, n+1, i):
+        prime[j] = False
 
-# t = int(input())
-import math
-def isPrime(st):
-    for j in range(2,int(math.sqrt(st))+1):
-        if st%j == 0:
-            return False
-    return True
+# print(prime)
 
-st = 2
-n = int(input())
-while True:
-    if isPrime(st):
-        n -= st
-        print(n)
-        print(st)
-        if isPrime(n):
+t = int(input())
+
+for i in range(t):
+    n = int(input())
+    a = n // 2
+    b = n // 2
+    while True:
+        if prime[a] and prime[b]:
+            print(a,b)
             break
         else:
-            st += 1
-
-print("n"+str(n)+" st"+str(st))
-
+            a -= 1
+            b += 1
