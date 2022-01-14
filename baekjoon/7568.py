@@ -5,6 +5,7 @@ n = int(input())
 
 person = []
 score = []
+
 for i in range(n):
  x, y = map(int,input().split())
  person.append((x,y))
@@ -15,7 +16,6 @@ for i in range(n):
         if person[i][0] < person[j][0] and person[i][1] < person[j][1]:
             cnt += 1
     score.append(cnt)
-    print(i)
 
 for s in score:
     print(s, end=" ")
