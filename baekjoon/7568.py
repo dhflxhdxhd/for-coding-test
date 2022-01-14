@@ -3,12 +3,12 @@
 
 n = int(input())
 
-person = []
 score = []
+person = [ list(map(int,input().split())) for i in range(n)]
 
-for i in range(n):
- x, y = map(int,input().split())
- person.append((x,y))
+# for i in range(n):
+#  x, y = map(int,input().split())
+#  person.append((x,y))
 
 for i in range(n):
     cnt = 1
