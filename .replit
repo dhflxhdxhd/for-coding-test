@@ -1,3 +1,5 @@
+
+
 language = "bash"
-run = "python ./baekjoon/2869.py"
+run = "python ./Algorithm/Sort/selectionSort.py"
 
