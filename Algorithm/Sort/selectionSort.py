@@ -6,6 +6,7 @@ for i in range(len(array)):
         if array[min_index] > array[j]:
             min_index = j 
     
-    array[i], array[min_index] = array[min_index], array[i]
+    # Swap : 특정한 리스트가 주어졌을 때 두 변수의 위치를 변경하는 작업
+    array[i], array[min_index] = array[min_index], array[i] 
 
 print(array)
