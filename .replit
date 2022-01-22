@@ -1,5 +1,5 @@
 
 
 language = "bash"
-run = "python ./Sort/05_antenna.py"
+run = "python ./baekjoon/2750.py"
 
