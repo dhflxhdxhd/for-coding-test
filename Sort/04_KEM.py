@@ -2,8 +2,9 @@ n = int(input())
 
 arr = []
 for i in range(n):
-    input_data = input().split()
-    arr.append((input_data[0], int(input_data[1]), int(input_data[2]), int(input_data[3])))
+    arr.append(input().split())
 
-array = sorted(arr, key=lambda score : (-score[1], score[2], -score[3], score[0]) )
-print(array)
+array = sorted(arr, key=lambda score : (-int(score[1]), int(score[2]), -int(score[3]), score[0]) )
+
+for a in array:
+    print(array[0])
