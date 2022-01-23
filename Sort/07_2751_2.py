@@ -18,7 +18,7 @@ def quick_sort(arr):
 
     return quick_sort(left_arr) + [pivot] + quick_sort(right_arr)
     
-quick_sort(arr)
+arr = quick_sort(arr)
 
 for a in arr:
     print(a)
