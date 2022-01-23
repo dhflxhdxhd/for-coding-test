@@ -11,7 +11,7 @@ def quick_sort(array):
     left_side = [x for x in tail if x <= pivot]
     right_side = [x for x in tail if x > pivot]
 
-    print(left_side)
+    # print(left_side)
     return quick_sort(left_side) + [pivot] + quick_sort(right_side)
 
 print(quick_sort(array))
