@@ -1,5 +1,6 @@
 #2751
-#퀵정렬
+#퀵정렬 O(nlogn)
+#메모리초과
 import sys
 n = int(input())
 
