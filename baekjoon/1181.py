@@ -7,7 +7,7 @@ for _ in range(n):
 
 arr = list(set(arr))
 
-arr.sort(key=lambda x : len(x))
+arr.sort(key=lambda x : (len(x), x))
 
 for a in arr:
     print(a)
