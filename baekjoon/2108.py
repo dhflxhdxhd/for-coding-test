@@ -11,8 +11,8 @@ arr.sort()
 def average(arr):
     print(sum(arr)/len(arr))
 
-def middle(arr):
-    print(arr[(len(arr)+1)/2 -1] )  
+
+print(arr[n//2])  
 
 def mode(arr):
     print("mode")
@@ -21,6 +21,5 @@ def range_arr(arr):
     print(arr[-1] - arr[0])
 
 average(arr)
-middle(arr)
 mode(arr)
 range_arr(arr)
