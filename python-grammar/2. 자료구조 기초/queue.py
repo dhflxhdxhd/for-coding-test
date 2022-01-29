@@ -1,4 +1,4 @@
-from collections import deque
+from collections import deque #collections 모듈에서 제공하는 deque 자료구조 사용. 
 
 queue = deque()
 
@@ -12,3 +12,4 @@ queue.popleft()
 print(queue)
 queue.reverse()
 print(queue)
+print(list(queue)) #deque -> list
