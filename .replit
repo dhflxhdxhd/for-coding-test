@@ -1,3 +1,2 @@
 language = "bash"
-run = "python ./python-grammar/queue.py"
-
+run = "python ./DFSBFS/bfs.py"
