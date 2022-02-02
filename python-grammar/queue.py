@@ -11,7 +11,7 @@
 
 from collections import deque #collections 모듈에서 제공하는 deque 자료구조 사용. 
 
-queue = deque()
+queue = deque([9,8,9,8,8,8]) #deque정의하는 법
 
 queue.append(5)
 queue.append(3)
