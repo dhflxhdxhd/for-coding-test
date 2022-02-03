@@ -1,5 +1,5 @@
 #카드 정렬하기
-///////////////error
+from collections import deque
 n =  int(input())
 
 arr = []
@@ -7,9 +7,14 @@ for _ in range(n):
     arr.append(int(input()))
 
 arr.sort()
+result = 0
+while len(arr) != 1:
+    one = arr.pop(0)
+    two = arr.pop(0)
+    sum = one + two
+    result += sum
+    arr.append(sum)
 
-sum = []
-sum.append(arr[0] + arr[1])
-for i in range(len(arr)-2):
-   sum.append(sum[0] + arr[1] + arr[2])
-print(sum)
+print(result)
+
+    
