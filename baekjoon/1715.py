@@ -6,9 +6,10 @@ arr = []
 for _ in range(n):
     arr.append(int(input()))
 
-arr.sort()
+
 result = 0
 while len(arr) != 1:
+    arr.sort()
     one = arr.pop(0)
     two = arr.pop(0)
     sum = one + two
