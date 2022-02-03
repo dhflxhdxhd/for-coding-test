@@ -1,22 +1,18 @@
 #카드 정렬하기
-#시간초과
-from collections import deque
+#우선순위 큐 -> heap 이용
+import heapq
 n =  int(input())
 
-arr = []
+h = []
 for _ in range(n):
-    arr.append(int(input()))
-
+    heapq.heappush(h,int(input()))
 
 result = 0
-while len(arr) != 1:
-    arr.sort()
-    one = arr.pop(0)
-    two = arr.pop(0)
-    sum = one + two
-    result += sum
-    arr.append(sum)
+while len(h) != 1:
+    one = heapq.heappop(h)
+    two = heapq.heappop(h)
+    sum_value = one + two
+    result += sum_value
+    heapq.heappush(h,sum_value)
 
 print(result)
-
-    
