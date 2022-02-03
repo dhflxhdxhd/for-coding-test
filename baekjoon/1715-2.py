@@ -1,5 +1,6 @@
 #카드 정렬하기
 #시간초과
+from collections import deque
 n =  int(input())
 
 arr = []
