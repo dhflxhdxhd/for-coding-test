@@ -1,5 +1,5 @@
 #virus
-#DFS/BFS
+#DFS
 
 def dfs(graph,v,visited):
     global cnt
@@ -8,6 +8,7 @@ def dfs(graph,v,visited):
         if not visited[i]:
             cnt += 1
             dfs(graph,i,visited)
+
 
 
 com = int(input())
