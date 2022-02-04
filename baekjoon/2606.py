@@ -20,4 +20,5 @@ cnt = 0
 visited = [False] * (com+1)
 
 dfs(graph,1,visited)
-print(cnt)
+print(count)
+# print(visited.count(True)-1)
