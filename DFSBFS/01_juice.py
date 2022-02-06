@@ -1,3 +1,7 @@
+#error
+#세로가 n이고 가로가 m인데 왜지??????????????????????
+
+
 n,m = map(int,input().split()) #세로 n 가로 m
 
 graph = []
@@ -19,7 +23,7 @@ def dfs(x,y):
 
 result = 0
 for i in range(m):
-    for j in range(n):
+    for j in range(n)):
         if dfs(i,j) == True:
             result += 1
 
