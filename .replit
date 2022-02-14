@@ -1,3 +1,2 @@
-
 language = "bash"
-run = "python ./binarySearch/sequential.py"
+run = "python ./baekjoon/18352.py"
