@@ -1,2 +1,2 @@
 language = "bash"
-run = "python ./baekjoon/11650.py"
+run = "python ./baekjoon/11650-2.py"
