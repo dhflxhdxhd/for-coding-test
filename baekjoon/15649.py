@@ -3,7 +3,7 @@ arr = []  # 출력 수열 넣을 리스트 (stack)
 visited = [False] * (N+1)  # 방문체크 할 리스트
 
 def dfs():
-    print(arr)
+    # print(arr)
     if len(arr) == M:
         print(' '.join(map(str, arr)))
         return
@@ -18,8 +18,8 @@ def dfs():
         arr.append(i)
         dfs()  # 재귀
         arr.pop()  # 원상복귀 
-        print("pop")
-        print(arr)
+        # print("pop")
+        # print(arr)
         visited[i] = False
 
 dfs()
