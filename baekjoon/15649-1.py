@@ -9,8 +9,9 @@ def dfs():
         return
     
     for i in range(1, N+1):
-    
+        
         if visited[i]:  # 이미 방문했으면 건너뜀
+            print(f'i = {i}')
             continue
 
         # 방문 안했으면 방문체크한 후, 출력 리스트에 넣고 다음 함수 호출
