@@ -12,6 +12,7 @@ for _ in range(n):
             if stack:
                 stack.pop()
             else:
+                # 올바르지 않은 문자열일 때
                 check = False
                 break
 
