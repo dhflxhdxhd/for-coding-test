@@ -2,13 +2,15 @@
 # str = ["12", "123", "1235", "567", "88"]
 # str.sort()
 # print(str)
+from collections import Counter
 
+p = ["leo","kiki", "eden"]
+c = ["eden", "kiki"]
+p.sort()
+c.sort()
 
-# p = ["leo", "dave","kiki", "eden"]
-# c = ["eden", "kiki"]
-# p.sort()
-# c.sort()
-
+answer = Counter(p) - Counter(c)
+print(list(answer)
 # def sol(p,c):
 #     p.sort()
 #     c.sort()
