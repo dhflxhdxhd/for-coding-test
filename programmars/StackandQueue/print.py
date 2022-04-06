@@ -2,7 +2,7 @@
 
 def solution(priorities, location):
     answer = []
-    num_index = [0,1,2,3] 
+    num_index = [i for i in range(len(priorities))]
     idx = 0
     
     while priorities:
