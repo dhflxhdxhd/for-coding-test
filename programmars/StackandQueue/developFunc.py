@@ -41,3 +41,5 @@ def solution(progresses, speeds):
             current = math.ceil((100-progresses[i]) / speeds[i])
     answer.append(cnt)
     return answer
+
+print(solution([93,30,55],[1,30,5]))
