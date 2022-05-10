@@ -13,7 +13,7 @@ def isPrime(num):
 
 def solution(numbers):
     num = [n for num in numbers]
-
+    print(num)
     print(num)
 
 

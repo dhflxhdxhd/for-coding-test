@@ -1,3 +1,4 @@
 language = "bash"
-run = "python ./programmars/init.py"
+run = "python ./init.py"
 
+https://replit.com/@dhflxhdxhd/
