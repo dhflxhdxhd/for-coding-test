@@ -1,4 +1,2 @@
 language = "bash"
 run = "python ./init.py"
-
-https://replit.com/@dhflxhdxhd/
