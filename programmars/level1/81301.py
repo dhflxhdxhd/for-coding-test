@@ -1,3 +1,9 @@
+# 코딩테스트 연습
+# 2021 카카오 채용연계형 인턴십
+# 숫자 문자열과 영단어
+
+
+
 words = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
 
 words_dict = {"zero": 0, "one": 1, "two":2, "three": 3, "four":4, "five":5, 

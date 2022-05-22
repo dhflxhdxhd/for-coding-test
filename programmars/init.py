@@ -1,30 +1,52 @@
-#완전탐색
-#소수 찾기
-from itertools import permutations
-import math
+z = ["zero"]
+o = ["one"]
+t = ["two", "three"]
+f = ["four", "five"]
+s = ["six", "seven"]
+e = ["eight"]
+n = ["nine"]
 
-def isPrime(num):
-    if(num == 1 or num == 0): return False
-    else:
-        for k in range(2,int(math.sqrt(num))+1):
-            if num % k == 0:
-                return False
-        return True
-
-def solution(numbers):
-    num = [num for num in numbers]
-    per_list = []
-    ans = []
+def checkNum(num):
+    if num[0] == "z":
+        initNum = 0
+    elif num[0] == "o":
+        initNum = 1
+    elif num[0] == "e":
+        initNum = 8
+    elif num[0] == "n":
+        initNum = 9
+    elif num[0] == "t":
+        if num[1] == "w":
+            initNum = 2
+        else:
+            initNum = 3
+    elif num[0] == "f":
+        if num[1] == "o":
+            initNum = 4
+        else:
+            initNum = 5
+    elif num[0] == "s":
+        if num[1] == "i":
+            initNum = 6
+        else:
+            initNum = 7
+    return initNum
     
-    for i in range(len(num)):
-        per_list += list(permutations(num, i+1))
-    num_list = [int("".join(per))for per in per_list]
-    # print(num_list)
+def solution(s):
 
-    for num in num_list:
-        if isPrime(num):
-            ans.append(num)
-
-    return len(set(ans))
     
-print(solution("011"))
+    num = ""
+    answer = []
+    for str in s:
+        if isdigit(str) :
+            if num != "":
+                answer.append(checkNum(num))
+            answer.append(int(str))
+        else:
+            num += str
+
+    return answer
+
+
+solution("one4seveneight")
+    
