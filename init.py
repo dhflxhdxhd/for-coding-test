@@ -1,20 +1,16 @@
-words = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
+# 코딩테스트 연습
+# 월간 코드 챌린지 시즌1
+# 두 개 뽑아서 더하기
 
-words_dict = {"zero": 0, "one": 1, "two":2, "three": 3, "four":4, "five":5, 
-             "six": 6, "seven":7, "eight":8, "nine":9}
-def solution(s):
-    num = ""
-    answer = []
-    for string in s:
-        if string.isdigit() :
-            answer.append(string)
-        else:
-            num += string
-            if num in words_dict.keys():
-                answer.append(words_dict.get(num))
-                num = ""
+#테스트케이스 3,4 error
+def solution(numbers):
+    ans = []
+    for i in range(len(numbers)):
+        for j in range(len(numbers)):
+            if i != j :
+                ans.append(numbers[i]+numbers[j])
 
-    result = ''.join(map(str, answer))
-        
-    return int(result)
+    answer = set(ans)
+    return list(answer)
 
+print(solution([5,0,2,7]))
