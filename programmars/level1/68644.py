@@ -3,9 +3,13 @@
 # 두 개 뽑아서 더하기
 
 def solution(numbers):
-    answer = []
-    for i in range(len(numbers)-1):
-        answer.append(numbers[i]+numbers[i+1])
+    ans = set()
+    for i in range(len(numbers)):
+        for j in range(i+1,len(numbers)):
+            ans.add(numbers[i]+numbers[j])
+
+    answer = list(ans)
+    answer.sort()
     return answer
 
-print(solution([2,1,3,4,1]))
+print(solution([5,0,2,7]))
