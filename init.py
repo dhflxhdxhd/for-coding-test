@@ -1,15 +1,17 @@
-# 코딩테스트 연습
-# 월간 코드 챌린지 시즌1
-# 두 개 뽑아서 더하기
+n = int(input())
+time_list = []
 
-def solution(numbers):
-    ans = set()
-    for i in range(len(numbers)):
-        for j in range(i+1,len(numbers)):
-            ans.add(numbers[i]+numbers[j])
+for i in range(n):
+    x,y = map(int,input().split())
+    time_list.append([x,y])
 
-    answer = list(ans)
-    answer.sort()
-    return answer
+time_list.sort(key = lambda x : (x[0], x[1]))
 
-print(solution([5,0,2,7]))
+cnt = 0 
+end = 0
+for s,e in time_list:
+    if s  >= end:
+        cnt += 1
+        end = e
+    
+print(cnt)
