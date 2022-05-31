@@ -8,3 +8,8 @@ def solution(a,b):
         inner += a[i]*b[i]
 
     return inner
+
+def solution(a,b):
+    answer = sum([x*y for x,y in zip(a,b)])
+
+    return answer
