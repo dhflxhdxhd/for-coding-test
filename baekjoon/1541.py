@@ -1,3 +1,7 @@
+#잃어버린 괄호
+#그리디
+#level2
+
 str = input().split("-")
 ans = []
 for s in str:
