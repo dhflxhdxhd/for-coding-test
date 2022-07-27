@@ -3,12 +3,12 @@ mums = list(map(int,input().split()))
 n = int(input())
 nums = list(map(int,input().split()))
 count = 0
-for num in nums:
-    for mum in mums:
-        if num == mum:
-            count += 1
-    print(count,end=' ')
-    count = 0
+# for num in nums:
+#     for mum in mums:
+#         if num == mum:
+#             count += 1
+#     print(count,end=' ')
+#     count = 0
 
 dict = dict()
 
