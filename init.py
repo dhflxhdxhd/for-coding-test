@@ -1,12 +1,14 @@
-# 1912. 연속합
+import sys
+n = int(sys.stdin.readline())
+d = [0] * 1000001
+def countNum(n):
+    if n == 1 or n == 2:
+        return n
 
-n = int(input())
-nums = list(map(int,input().split()))
-d = [0] * n
-d[0] = nums[0]  # 초기 설정 : 0번째 숫자를 넣음
+    if d[n] != 0 :
+        return d[n]
+    
+    d[n] = countNum(n-1) + countNum(n-2)
+    return d[n]
 
-for i in range(1, len(nums)):
-    d[i] = max(nums[i], d[i-1] + nums[i]) 
-
-print(max(d))
-
+print(countNum(n)%15746)
