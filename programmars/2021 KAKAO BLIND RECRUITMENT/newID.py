@@ -1,3 +1,5 @@
+# 정규식을 쓰면 더 간단하게 할 수 있을 듯.
+
 from collections import deque
 
 def solution(new_id):
@@ -36,3 +38,4 @@ def solution(new_id):
     
 print("".join(solution(new_id)))      
         
+
