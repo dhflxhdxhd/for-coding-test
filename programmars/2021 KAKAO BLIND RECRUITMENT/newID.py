@@ -2,8 +2,7 @@ from collections import deque
 
 def solution(new_id):
     # 1단계
-    new_id = new_id.lower() # 대문자 -> 소문자
-    
+    new_id.lower() # 대문자 -> 소문자
     queue = deque([])
 
     for idx in range(len(new_id)):
@@ -25,13 +24,12 @@ def solution(new_id):
     if queue:
         if queue[-1] == ".":
             queue.pop()
-    print("d",len(queue))
-    if len(queue) < 3:
-        print(len(queue))
-        # last = queue[-1]
 
-        # while len(queue) == 3:
-        #     queue.append(last)
+    if len(queue) < 3:
+        last = queue[-1]
+
+        while len(queue) == 3:
+            queue.append(last)
         
 
     return queue
