@@ -10,7 +10,6 @@ def solution(new_id):
         if len(queue) == 15:
             break
 
-        print(idx)
         # 2단계 & 3단계
         if new_id[idx].islower() or new_id[idx].isdigit() or new_id[idx] == "-" or new_id[idx] == "_" or new_id[idx] == ".":
             if new_id[idx] == ".":
@@ -25,17 +24,15 @@ def solution(new_id):
     if queue:
         if queue[-1] == ".":
             queue.pop()
-    print("d",len(queue))
+   
     if len(queue) < 3:
-        print(len(queue))
-        # last = queue[-1]
+        last = queue[-1]
+        num = 3 - len(queue)
 
-        # while len(queue) == 3:
-        #     queue.append(last)
+        for i in range(num):
+            queue.append(last)
         
-
-    return queue
+    return list(queue)
     
-print(solution("HI"))
-            
+print("".join(solution(new_id)))      
         
