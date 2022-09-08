@@ -1,21 +1,27 @@
-# 순위 검색
+# 메뉴리뉴얼
+# 마지막 입출력 예제에서 오류
+# ["XYZ", "XWY", "WXA"]	[2,3,4]	["WX", "XY"]
+# 왜지...?
 
+from itertools import combinations
+from collections import Counter
 
-def solution(info, query):
-    info_list = [([] for i in range(5)) for i in range(len(info))]
-    query_list = [([] for i in range(5)) for i in range(len(info))]
-    
-    for i in range(len(info)):
-        info_list[i] = info[i].split(" ")
+def solution(orders, course):
+    answer = []
+    for c in course:
+        print(c)
+        # print(c)
+        temp = []
+        for order in orders:
+            permute = combinations(sorted(order),c)
+            # print(list(permute))
+            temp += permute
 
-    for j in range(len(query)):
-        query_list[j] = query[j].split(" ")
+        counter_temp = Counter(temp).most_common()
+        print(counter_temp)
+        answer += [''.join(menu) for menu, cnt in counter_temp if cnt > 1 and cnt == counter_temp[0][1] ]
 
+    return sorted(answer)
+            
 
-info = ["java backend junior pizza 150","python frontend senior chicken 210","python frontend senior chicken 150","cpp backend senior pizza 260","java backend junior chicken 80","python backend senior chicken 50"]
-query = ["java and backend and junior and pizza 100","python and frontend and senior and chicken 200","cpp and - and senior and pizza 250","- and backend and senior and - 150","- and - and - and chicken 100","- and - and - and - 150"]
-
-print(solution(info,query))
-
-
-
+print(solution(["XYZ", "XWY", "WXA"],[2,3,4]))
