@@ -1,3 +1,5 @@
+# 프린터 큐
+# https://assaeunji.github.io/python/2020-05-04-bj1966/
 from collections import deque
 n,m = map(int, input().split())
 list = list(input().split())
