@@ -7,13 +7,12 @@ for i in range(t):
 
     command = sys.stdin.readline()
     n = int(input())
+    # nums = list(map(int,input()[1:-1].split(',')))
     nums = sys.stdin.readline()[1:-1].split(',')
     queue = deque(nums)
     
     if n == 0:
         queue = deque()
-    else:
-        queue = deque(nums)
 
     
     check = 1
