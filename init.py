@@ -1,35 +1,24 @@
-from collections import deque
-import sys
+# 이진탐색
+# 방법 1. 재귀함수로 구현
 
-t = int(input())
+def binary_search(arr,target,start,end):
+    mid = (start+end) // 2
+    if start > end :
+        return None
+        
+    if array[mid] == target:
+        return mid
+    if array[mid] > target:
+        binary_search(arr,target,start,mid-1)
+    else:
+        binary_search(arr,target,mid+1,end)
 
-for i in range(t):
-    command = sys.stdin.readline()
-    n = int(input())
-    nums = sys.stdin.readline().rstrip()[1:-1].split(',')
-    queue = deque(nums)
-    
-    if n == 0:
-        queue = deque()
+n, target = (list(map(int,input().split())))
+array = list(map(int,input().split()))
 
-    reverse = 0
-    check = 1
-    for cmd in command:
-        if cmd == "R":
-            reverse += 1
-        elif cmd == "D":
-            if queue:
-                if reverse % 2 == 0:
-                    queue.popleft()
-                else:
-                    queue.pop()
-            else:
-                print("error")
-                check = 0
-                break
+result = binary_search(array,target,0, n-1)
 
-    if check == 1:
-        if reverse % 2 == 1:
-            queue.reverse()
-        print("["+",".join(list(queue))+"]")
- 
+if result == None:
+    print("none")
+else:
+    print(result + 1)
