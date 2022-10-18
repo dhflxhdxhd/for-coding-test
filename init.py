@@ -21,4 +21,7 @@ result = binary_search(array,target,0, n-1)
 if result == None:
     print("none")
 else:
-    print(result + 1)
+    print(result + 1)\
+
+
+;
