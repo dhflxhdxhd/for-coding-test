@@ -1,4 +1,7 @@
 # 10816 숫자 카드 2
+
+# 이진탐색 이용
+# 시간초과
 n = int(input())
 nums = list(map(int,input().split()))
 m = int(input())
