@@ -1,4 +1,4 @@
-language = "bash"
+language = "python"
 run = "python ./init.py"
 
 [env]
