@@ -10,5 +10,5 @@ for i in range(n):
     result = max(result,minCard)
 
 print(result);
-
+    
     
