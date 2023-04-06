@@ -46,7 +46,7 @@ def bfs():
                 testLab[nextX][nextY] = 2
                 queue.append((nextX,nextY))
 
-    return lab
+    return testLab
 
 maxCount = 0
 def countZero(graph):
