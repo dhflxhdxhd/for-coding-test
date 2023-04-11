@@ -1,6 +1,7 @@
 # 1697. 숨바꼭질
 from collections import deque
 MAX = 10**5
+
 sec = [0]*(MAX+1)
 n, k = map(int, input().split())
 
@@ -19,5 +20,6 @@ def bfs(start):
             if 0 <= i <= MAX and not sec[i]:
                 sec[i] = sec[v] + 1
                 queue.append(i)
+
 
 bfs(n)
