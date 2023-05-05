@@ -14,7 +14,7 @@ for i in range(2,len(nums)+1):
 sNums.sort()
 sNums = list(set(sNums))
 target = 1
-print(sNums)
+
 
 for i in range(0,len(sNums)):
     if target != sNums[i] :
